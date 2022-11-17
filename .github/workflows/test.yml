@@ -13,4 +13,4 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: "Run Jest"
-        run: ls
+        run: npm install
