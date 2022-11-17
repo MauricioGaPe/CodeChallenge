@@ -1,4 +1,4 @@
-const Reader = require('./../utils/reader')
+const Reader = require("./../utils/reader");
 
 class StudentsService {
     static allStudentsService(){
@@ -10,7 +10,7 @@ class StudentsService {
         let studentsWC = [];
         students.forEach(student => {
             if (student.haveCertification) {
-                studentsWC.push(student)
+                studentsWC.push(student);
             }
         });
         return JSON.stringify(studentsWC);
@@ -21,7 +21,7 @@ class StudentsService {
         let studentsCM = [];
         students.forEach(student => {
             if (student.credits >= 500) {
-                studentsCM.push(student)
+                studentsCM.push(student);
             }
         });
         return JSON.stringify(studentsCM);

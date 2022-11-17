@@ -1,4 +1,4 @@
-const StudentsService = require('./services/studentsService')
+const StudentsService = require("./services/studentsService");
 
 class ServiceController {
     static allStudents(){
