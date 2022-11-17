@@ -1,17 +1,3 @@
-name: Run Tests in my project every push on GitHub
-
-on: [push]
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-    - uses: actions/checkout@v2
-    - name: Run Jest
-      run: npm install
-      run: npm test
-
-
 name: Deploy Workflow Azure
 on: [push]
 env:
