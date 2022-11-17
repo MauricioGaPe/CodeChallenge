@@ -1,16 +1,26 @@
-
-name: Tests
-
-on: [push]
-
+name: Node.js CI
+on:
+push:
+branches: [ master ]
+pull_request:
+branches: [ master ]
 jobs:
-  build:
+build:
+runs-on: ${{matrix.os}}
+strategy:
+max-parallel: 24
+matrix:
+//Set which OS you want to run the builds and tests:
+os: [windows-latest]
+//Set which node versions to run the build and tests:
+node-version: [16.x]
+steps:
+- uses: actions/checkout@v2
+- name: Use Node.js ${{ matrix.node-version }}
+uses: actions/setup-node@v1
+with:
+node-version: ${{ matrix.node-version }}
 
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v1
-    - name: Run Jest
-      uses: stefanoeb/jest-action@1.0.3
-      with:
-        jestArgs: test/lib/serviceController.test.js
+- run: npm ci
+//before the first 'run' each "run" is a script from your project:
+- run: npm test
