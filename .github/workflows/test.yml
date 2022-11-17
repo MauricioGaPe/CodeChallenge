@@ -15,4 +15,4 @@ jobs:
       - name: "Install Dependencies"
         run: npm install
       - name: "Run Jest"
-        run: npm testDev
+        run: npm test

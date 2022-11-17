@@ -4,8 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "node jest",
-    "testDev": "node ./node_modules/jest/bin/jest.js",
+    "test": "node ./node_modules/jest/bin/jest.js",
     "start": "node ./src/app/index.js"
   },
   "author": "",
