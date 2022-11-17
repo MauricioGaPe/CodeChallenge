@@ -13,4 +13,4 @@ jobs:
         with:
           node-version: ${{ env.NODE_VERSION }}
       - name: "Run Jest"
-        uses: stefanoeb/jest-action@1.0.3
+        run: npm test
