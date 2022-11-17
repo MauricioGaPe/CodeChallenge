@@ -14,3 +14,4 @@ jobs:
           node-version: ${{ env.NODE_VERSION }}
       - name: "Run Jest"
         run: npm install
+        npm testDev
